@@ -40,7 +40,7 @@ def handle_request(question):
     else:
         result_list = get_data_from_dbpedia(json_result)
         for result in result_list:
-            if len(result['results']['bindings'] == 0):
+            if len(result['results']['bindings']) == 0:
                 continue
             result = result['results']['bindings'][0]
             print(result['label']['value'] + '\n\n')
